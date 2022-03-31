@@ -1,0 +1,73 @@
+GET http://localhost:8080/product
+
+### posting products
+POST http://localhost:8080/product
+Content-Type: application/json
+
+{
+    "name" : "iphone10 max fax rex",
+    "price": 4688
+}
+
+### geting product by id
+
+GET   http://localhost:8080/product/622612090e64be490bcc66c2
+
+### patch (update) product by id
+PATCH http://localhost:8080/product/622612090e64be490bcc66c2
+Content-Type: application/json
+
+{
+    "name" : "peets",
+    "price" : 12345
+}
+
+### deleting product by id
+DELETE  http://localhost:8080/product/622612090e64be490bcc66c2
+
+### user get
+
+GET http://localhost:8080/user
+
+### 404 route product not found
+GET http://localhost:8080/123_ABC
+
+
+### pet post router 
+
+POST http://localhost:8080/pet/
+Content-Type: application/json
+
+{
+    "microchip": 123321,
+    "name" : " rex",
+    "password": "peter",
+    "dogsParents" : "zalem"
+
+}
+
+#### get pet by microchip
+
+GET http://localhost:8080/pet/123
+
+### get by password
+
+GET http://localhost:8080/pet/edit/123321/jakiz
+
+####
+POST http://localhost:8080/pet/edit/123321/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "password":"jakiz"
+}
+
+
+### get by pass
+
+GET http://localhost:8080/pet/postedit/jakiz
+
+
+### editin pets details
+
+PATCH http://localhost:8080/pet/update/123321
